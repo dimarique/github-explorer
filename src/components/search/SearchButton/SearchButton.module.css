@@ -1,0 +1,8 @@
+.searchButton {
+  max-width: 100px;
+}
+
+.searchButton button {
+  border: 1px solid red;
+  border-radius: 10px;
+}
