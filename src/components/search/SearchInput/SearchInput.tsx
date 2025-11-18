@@ -1,10 +1,10 @@
 import styles from "./SearchInput.module.css";
 
 interface SearchInputProps {
-  // props?
+  setPerson: Function;
 }
 
-const SearchInput: React.FC<SearchInputProps> = () => {
+const SearchInput: React.FC<SearchInputProps> = ({ setPerson }) => {
   return (
     <div className={styles.searchInput}>
       <input type="text" placeholder="Search GitHub username..." />

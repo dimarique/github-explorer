@@ -1,15 +1,15 @@
-import SearchButton from '../SearchButton/SearchButton';
-import SearchInput from '../SearchInput/SearchInput';
-import styles from './SearchField.module.css';
+import SearchButton from "../SearchButton/SearchButton";
+import SearchInput from "../SearchInput/SearchInput";
+import styles from "./SearchField.module.css";
 
 interface SearchFieldProps {
-  // props?
+  setPerson: Function;
 }
 
-const SearchField: React.FC<SearchFieldProps> = () => {
+const SearchField: React.FC<SearchFieldProps> = ({ setPerson }) => {
   return (
     <div className={styles.searchField}>
-      <SearchInput />
+      <SearchInput setPerson={setPerson} />
       <SearchButton />
     </div>
   );
