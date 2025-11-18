@@ -1,4 +1,4 @@
-import styles from './SearchButton.module.css';
+import styles from "./SearchButton.module.css";
 
 interface SearchButtonProps {
   // props?
@@ -6,9 +6,9 @@ interface SearchButtonProps {
 
 const SearchButton: React.FC<SearchButtonProps> = () => {
   return (
-    <div className={styles.searchButton}>
-      <button>test</button>
-    </div>
+    <>
+      <button className={styles.searchButton}>Search</button>
+    </>
   );
 };
 

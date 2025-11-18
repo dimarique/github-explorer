@@ -1,4 +1,4 @@
-import styles from './SearchInput.module.css';
+import styles from "./SearchInput.module.css";
 
 interface SearchInputProps {
   // props?
@@ -7,7 +7,7 @@ interface SearchInputProps {
 const SearchInput: React.FC<SearchInputProps> = () => {
   return (
     <div className={styles.searchInput}>
-      <input type="text" />
+      <input type="text" placeholder="Search GitHub username..." />
     </div>
   );
 };
