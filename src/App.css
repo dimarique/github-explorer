@@ -1,10 +1,15 @@
 #root {
-  display: flex;
-  flex-direction: column;
-  place-items: center;
-  margin: 0 auto;
-  padding: 2rem;
-  width: 100%;
-  max-width: 1280px;
-  text-align: center;
+	display: flex;
+	flex-direction: column;
+	place-items: center;
+	margin: 0 auto;
+	padding: 2rem;
+	width: 100%;
+	max-width: 1280px;
+	text-align: center;
+}
+
+.hint {
+	color: #bcbcbc;
+	font-size: 12px;
 }

@@ -1,15 +1,29 @@
 import styles from "./SearchButton.module.css";
 
 interface SearchButtonProps {
-  // props?
+	localValue: string
+	setInputValue: (value: string) => void
+	setLocalValue: (value: string) => void
 }
 
-const SearchButton: React.FC<SearchButtonProps> = () => {
-  return (
-    <>
-      <button className={styles.searchButton}>Search</button>
-    </>
-  );
+const SearchButton: React.FC<SearchButtonProps> = ({
+	setInputValue,
+	localValue,
+	setLocalValue
+}) => {
+	return (
+		<>
+			<button onClick={() => {
+				if (localValue.length > 0) {
+					setInputValue(localValue);
+					setLocalValue('')
+				}
+			}}
+				className={styles.searchButton}>
+				Search
+			</button>
+		</>
+	);
 };
 
 export default SearchButton;
