@@ -20,7 +20,7 @@ const SearchInput: React.FC<SearchInputProps> = ({
 			<input
 				value={localValue}
 				onKeyDown={(e) => {
-					if (e.key === "Enter") {
+					if (e.key === "Enter" && localValue.trim() !== "") {
 						setInputValue(localValue);
 						setLocalValue("")
 					}

@@ -14,10 +14,8 @@ const SearchButton: React.FC<SearchButtonProps> = ({
 	return (
 		<>
 			<button onClick={() => {
-				if (localValue.length > 0) {
-					setInputValue(localValue);
-					setLocalValue('')
-				}
+				setInputValue(localValue);
+				setLocalValue('')
 			}}
 				className={styles.searchButton}>
 				Search

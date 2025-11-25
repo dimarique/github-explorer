@@ -13,9 +13,7 @@ const SearchField: React.FC<SearchFieldProps> = ({ setInputValue
 	const [localValue, setLocalValue] = useState("");
 	const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 		const value = e.target.value;
-		if (value.length > 0) {
-			setLocalValue(value);
-		}
+		setLocalValue(value);
 	}
 	return (
 		<div className={styles.searchField}>
