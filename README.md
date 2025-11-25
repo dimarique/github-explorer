@@ -1,73 +1,116 @@
-# React + TypeScript + Vite
+# 🔍 GitHub Explorer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern web application for discovering GitHub users and exploring their repositories. Built with React, TypeScript, and the GitHub REST API.
 
-Currently, two official plugins are available:
+![GitHub Explorer Preview](./preview.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## React Compiler
+- **Real-time Search** - Find any GitHub user instantly
+- **Detailed Profiles** - View user info, bio, location, and stats
+- **Repository Browser** - Explore repos with descriptions, stars, and forks
+- **Language Filters** - Filter repositories by programming language
+- **Responsive Design** - Works seamlessly on desktop and mobile
+- **Modern UI** - Glassmorphism design with smooth animations
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Demo
 
-## Expanding the ESLint configuration
+[Live Demo](https://your-app.vercel.app) | [Video Walkthrough](link-if-you-have)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🛠️ Built With
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **React 18** - UI library
+- **TypeScript** - Type safety
+- **Tailwind CSS** - Styling
+- **GitHub REST API** - Data source
+- **Lucide React** - Icons
+- **Vite** - Build tool
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 📦 Installation
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Clone the repository
+
+git clone https://github.com/yourusername/github-explorer.git
+
+# Navigate to project directory
+
+cd github-explorer
+
+# Install dependencies
+
+npm install
+
+# Start development server
+
+npm run dev
+
+## 🔑 API Setup
+
+This app uses the GitHub API. For better rate limits, add your GitHub token:
+
+1. Create a `.env` file in the root directory
+2. Add your token:
+
+```
+VITE_GITHUB_TOKEN=your_personal_access_token
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+[How to generate a GitHub token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 💡 Usage
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1. Enter a GitHub username in the search bar
+2. Press Enter or click Search
+3. View user profile and statistics
+4. Browse through their repositories
+5. Filter repos by language or sort by stars
+
+## 📸 Screenshots
+
+### Main Search
+
+![Search Interface](./screenshots/search.png)
+
+### User Profile
+
+![User Profile](./screenshots/profile.png)
+
+### Repository List
+
+![Repositories](./screenshots/repos.png)
+
+## 🎯 Key Learnings
+
+- Working with REST APIs and handling async data
+- TypeScript generics and interface design
+- Error handling and loading states
+- Responsive design with Tailwind CSS
+- React hooks (useState, useEffect, custom hooks)
+
+## 🚧 Roadmap
+
+- [ ] Add pagination for repositories
+- [ ] Dark/light theme toggle
+- [ ] Save favorite users to local storage
+- [ ] Compare two users side-by-side
+- [ ] Repository search within user profile
+
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to open an issue or submit a pull request.
+
+## 📝 License
+
+MIT License - feel free to use this project for learning or your portfolio.
+
+## 👤 Author
+
+**Your Name**
+
+- GitHub: [@yourusername](https://github.com/yourusername)
+- LinkedIn: [Your Name](https://linkedin.com/in/yourprofile)
+- Portfolio: [yourwebsite.com](https://yourwebsite.com)
+
+---
+
+⭐ Star this repo if you found it helpful!
