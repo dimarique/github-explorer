@@ -1,4 +1,5 @@
 .mainInfo {
+  margin-top: 30px;
   padding: 20px;
   width: 100%;
   color: #ffffff;
@@ -52,6 +53,8 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  border: 1px solid #3154a7;
+  border-bottom: none;
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
   background-image: linear-gradient(
@@ -69,13 +72,13 @@
 }
 
 .lower_part {
-  border: 1px solid #333333;
+  border: 1px solid #3154a7;
   border-top: none;
   padding: 30px;
 }
 
 .number {
-  margin-top: 20px;
+  /* margin-top: 20px; */
   margin-bottom: 0;
 }
 
@@ -84,6 +87,6 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 5px;
   margin-top: 15px;
 }

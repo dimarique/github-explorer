@@ -3,7 +3,7 @@
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
-	margin-bottom: 40px;
+	margin-bottom: 100px;
 	/* gap: 12px; */
 	border-bottom: 1px solid #3154a7;
 	background-image: linear-gradient(to right,
@@ -29,6 +29,7 @@
 }
 
 .icon {
-	background-color: #782d92;
+	background-color: #eb44ae;
 	padding: 10px;
+	border-radius: 10px;
 }

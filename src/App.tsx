@@ -21,6 +21,8 @@ function App() {
 			})
 			.then((parsed) => {
 				setPerson(parsed);
+				console.log(parsed);
+
 			})
 			.catch(() => {
 				setPerson(null);

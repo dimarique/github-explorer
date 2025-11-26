@@ -1,15 +1,15 @@
 #root {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  margin: 0 auto;
-  width: 100%;
-  max-width: 1280px;
-  text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1280px;
+	text-align: center;
 }
 
 .hint {
-  color: #bcbcbc;
-  font-size: 12px;
+	color: #bcbcbc;
+	font-size: 12px;
 }
