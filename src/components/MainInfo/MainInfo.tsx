@@ -1,9 +1,12 @@
 import styles from "./MainInfo.module.css";
 import { Users, BookOpen, MapPin, Link, Calendar } from "lucide-react";
-import type { Person } from "../../types";
+
+import type { components } from "@octokit/openapi-types";
+
+type GithubUser = components["schemas"]["public-user"];
 
 interface MainInfoProps {
-	person: Person;
+	person: GithubUser;
 }
 
 const MainInfo: React.FC<MainInfoProps> = ({ person }) => {
