@@ -74,6 +74,8 @@
 .lower_part {
   border: 1px solid #3154a7;
   border-top: none;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
   padding: 30px;
 }
 

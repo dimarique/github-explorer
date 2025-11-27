@@ -1,5 +1,5 @@
 import styles from "./RepoListItem.module.css";
-import { Star, GitFork } from "lucide-react";
+import { Star, GitFork, ExternalLink } from "lucide-react";
 
 import type { components } from "@octokit/openapi-types";
 
@@ -11,15 +11,26 @@ interface RepoListItemProps {
 const RepoListItem: React.FC<RepoListItemProps> = ({ repo }) => {
   return (
     <div className={styles.repoListItem}>
-      <span className={styles.repo_language}>{repo.language}</span>
-      <h2 className={styles.repo_name}>{repo.name}</h2>
+      {repo.language && (
+        <span className={styles.repo_language}>{repo.language}</span>
+      )}
+      <h2 className={styles.repo_name}>
+        <a href={repo.html_url} target="_blank" rel="noopener noreferrer">
+          {repo.name}
+          <ExternalLink size={14} style={{ marginLeft: "6px" }} />
+        </a>
+      </h2>
       <p className={styles.repo_description}>{repo.description}</p>
       <div className={styles.repo_footer}>
-        <div className={styles.repo_footer_stars}>
+        <div
+          className={`${styles.repo_footer_stars} ${styles.repo_footer_numbers}`}
+        >
           <Star />
           <span className={styles.number}>{repo.stargazers_count}</span>
         </div>
-        <div className={styles.repo_footer_forks}>
+        <div
+          className={`${styles.repo_footer_forks} ${styles.repo_footer_numbers}`}
+        >
           <GitFork />
 
           <span className={styles.number}>{repo.forks}</span>
