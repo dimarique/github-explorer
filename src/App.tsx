@@ -1,11 +1,10 @@
 import { useState, useEffect } from "react";
 import SearchField from "./components/search/SearchField/SearchField";
 import "./App.css";
-import MainInfo from "./components/MainInfo/MainInfo";
 import Header from "./components/Header/Header";
-import RepoList from "./components/RepoList/RepoList";
 import { useUserInfo } from "./hooks/useUserInfo";
 import { useUserReposList } from "./hooks/useUserReposList";
+import ContentWrapper from "./components/ContentWrapper/ContentWrapper";
 
 function App() {
   const [inputValue, setInputValue] = useState("");
@@ -18,8 +17,7 @@ function App() {
     <>
       <Header />
       <SearchField setInputValue={setInputValue} inputValue={inputValue} />
-      <MainInfo person={person} />
-      <RepoList reposList={reposList} />
+      <ContentWrapper person={person} reposList={reposList} />
     </>
   );
 }

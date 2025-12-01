@@ -1,8 +1,9 @@
 .user_info {
   display: flex;
+  flex: 1.5;
   flex-direction: column;
-  margin-top: 30px;
-  padding: 20px;
+  /* margin-top: 30px; */
+  /* padding: 20px; */
   width: 100%;
   color: #ffffff;
 }
@@ -56,14 +57,14 @@
   border-bottom: none;
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
     to right bottom,
     #432c6c,
     #4f2e76,
     #5c2e80,
     #692e89,
     #782d92
-  );
+  ); */
   padding: 30px;
   padding-bottom: 10px;
   max-width: 100%;
