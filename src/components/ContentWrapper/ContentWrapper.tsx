@@ -2,8 +2,16 @@ import MainInfo from "../MainInfo/MainInfo";
 import RepoList from "../RepoList/RepoList";
 import styles from "./ContentWrapper.module.css";
 
+import type { components } from "@octokit/openapi-types";
+
+type GithubRepo = components["schemas"]["repository"];
+type GithubReposList = GithubRepo[];
+
+type GithubUser = components["schemas"]["public-user"];
+
 interface ContentWrapperProps {
-  // props?
+  person: GithubUser;
+  reposList: GithubReposList;
 }
 
 const ContentWrapper: React.FC<ContentWrapperProps> = ({
