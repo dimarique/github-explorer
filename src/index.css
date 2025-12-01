@@ -1,52 +1,65 @@
 :root {
-	font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-	font-synthesis: none;
-	text-rendering: optimizeLegibility;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  font-family: "Inter", system-ui, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 *,
 *::before,
 *::after {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-	display: flex;
-	/* place-items: center; */
-	margin: 0;
-	background-color: #433466;
-	background-image: linear-gradient(to right bottom,
-			#161833,
-			#1e1d44,
-			#292256,
-			#372567,
-			#472777,
-			#472777,
-			#472777,
-			#472777,
-			#372567,
-			#292256,
-			#1e1d44,
-			#161833);
-	width: 100%;
-	min-width: 320px;
-	min-height: 100vh;
-	color: grey;
+  display: flex;
+  margin: 0;
+  background-image: linear-gradient(
+    to right bottom,
+    #161833,
+    #1e1d44,
+    #292256,
+    #372567,
+    #472777,
+    #472777,
+    #472777,
+    #472777,
+    #372567,
+    #292256,
+    #1e1d44,
+    #161833
+  );
+  background-color: #433466;
+  width: 100%;
+  min-width: 320px;
+  min-height: 100vh;
+  color: grey;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+p {
+  font-size: 16px;
 }
 
 button {
-	-webkit-appearance: none;
-	appearance: none;
-	cursor: pointer;
-	margin: 0;
-	border: none;
-	background: none;
-	padding: 0;
-	color: inherit;
-	font: inherit;
-	line-height: inherit;
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  margin: 0;
+  border: none;
+  background: none;
+  padding: 0;
+  color: inherit;
+  font: inherit;
+  line-height: inherit;
 }
