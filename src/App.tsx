@@ -18,7 +18,6 @@ function App() {
     <>
       <Header />
       <SearchField setInputValue={setInputValue} inputValue={inputValue} />
-      <p className="hint">Try searchimg: torvalds, gaearon, octocat</p>
       <MainInfo person={person} />
       <RepoList reposList={reposList} />
     </>

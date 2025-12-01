@@ -5,11 +5,21 @@
 	align-items: center;
 	margin: 0 auto;
 	width: 100%;
-	max-width: 1280px;
+	max-width: 1000px;
 	text-align: center;
 }
 
 .hint {
 	color: #bcbcbc;
 	font-size: 12px;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+a:hover {
+	border-bottom: 1px solid currentColor;
+}
 }
