@@ -1,4 +1,6 @@
 .user_info {
+  display: flex;
+  flex-direction: column;
   margin-top: 30px;
   padding: 20px;
   width: 100%;
@@ -9,9 +11,6 @@
   border-radius: 10px;
   aspect-ratio: 1 / 1;
   max-width: 100px;
-}
-
-.user_full_name {
 }
 
 .user_login {
