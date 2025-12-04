@@ -4,6 +4,8 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  --primary-color: #0f172a;
+  --bg-color: #f8fafc;
 }
 
 *,
@@ -17,7 +19,7 @@
 body {
   display: flex;
   margin: 0;
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
     to right bottom,
     #161833,
     #1e1d44,
@@ -31,12 +33,13 @@ body {
     #292256,
     #1e1d44,
     #161833
-  );
-  background-color: #433466;
+  ); */
+  /* background-color: #433466; */
+  background-color: var(--bg-color);
   width: 100%;
   min-width: 320px;
   min-height: 100vh;
-  color: grey;
+  color: var(--primary-color);
 }
 
 h1 {

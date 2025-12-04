@@ -1,13 +1,6 @@
 .searchButton {
   border-radius: 10px;
-  background-image: linear-gradient(
-    to right,
-    #aa55f4,
-    #ca4adc,
-    #de44c5,
-    #eb44ae,
-    #f24a9a
-  );
+  background-color: #2563eb;
   padding: 8px 16px;
   max-width: 100px;
   color: #ffffff;
