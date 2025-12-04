@@ -1,9 +1,5 @@
 .repoList {
   display: flex;
-  flex: 2;
   flex-direction: column;
-  gap: 10px;
-  /* padding: 20px; */
-  width: 100%;
-  color: #ffffff;
+  gap: 8px;
 }

@@ -29,7 +29,7 @@ const SearchField: React.FC<SearchFieldProps> = ({ setInputValue }) => {
           setLocalValue={setLocalValue}
         />
       </div>
-      <p className="hint">
+      <p className={styles.hint}>
         Try searching:{" "}
         {
           <a

@@ -1,20 +1,27 @@
 .searchField {
   display: flex;
   justify-content: space-between;
-  border: 1px solid #3154a7;
+  border: 1px solid var(--primary-color);
   border-radius: 20px;
-  background-image: linear-gradient(
-    to right,
-    #3a3256,
-    #433466,
-    #4d3476,
-    #5a3485,
-    #683193
-  );
+  background-color: var(--bg-color);
   padding: 10px;
   width: 80%;
+  max-width: 1280px;
+  color: var(--pimary-color);
 
   a {
     cursor: pointer;
+  }
+}
+
+.hint {
+  margin-top: 0;
+  color: #bcbcbc;
+  font-size: 12px;
+}
+
+@media screen and (max-width: 500px) {
+  .searchField {
+    width: 95%;
   }
 }
