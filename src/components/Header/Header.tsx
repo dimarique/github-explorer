@@ -14,7 +14,11 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme, setInputValue }) => {
       </div>
       <div className={styles.right}>
         <h1 className={styles.header_text}>GitHub Explorer</h1>
-        <SunMoon onClick={() => toggleTheme()} />
+        <SunMoon
+          onClick={() => toggleTheme()}
+          size={24}
+          style={{ cursor: "pointer" }}
+        />
         <p>Discover amaizing developers</p>
       </div>
     </div>

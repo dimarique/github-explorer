@@ -17,6 +17,11 @@ function App() {
     console.log(reposList);
     // console.log(person);
   });
+  useEffect(() => {
+    if (person || reposList) {
+      window.scrollTo({ top: 250, behavior: "smooth" });
+    }
+  }, [person, reposList]);
   const toggleTheme = () => {
     setIsDark(!isDark);
     document.documentElement.setAttribute(
