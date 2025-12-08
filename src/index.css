@@ -6,6 +6,15 @@
   -moz-osx-font-smoothing: grayscale;
   --primary-color: #0f172a;
   --bg-color: #f8fafc;
+  --shadow-small: rgba(0, 0, 0, 0.15) 0px 1px 1px;
+}
+
+[data-theme="dark"] {
+  /* --primary-color: #94a3b8; */
+  --primary-color: #e2e8f0;
+  --bg-color: #1e293b;
+  /* --bg-color: #0f172a; */
+  --shadow-small: none;
 }
 
 *,
@@ -19,22 +28,6 @@
 body {
   display: flex;
   margin: 0;
-  /* background-image: linear-gradient(
-    to right bottom,
-    #161833,
-    #1e1d44,
-    #292256,
-    #372567,
-    #472777,
-    #472777,
-    #472777,
-    #472777,
-    #372567,
-    #292256,
-    #1e1d44,
-    #161833
-  ); */
-  /* background-color: #433466; */
   background-color: var(--bg-color);
   width: 100%;
   min-width: 320px;

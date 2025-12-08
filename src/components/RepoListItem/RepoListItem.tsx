@@ -1,5 +1,12 @@
 import styles from "./RepoListItem.module.css";
-import { Star, GitFork, ExternalLink } from "lucide-react";
+import {
+  Star,
+  GitFork,
+  ExternalLink,
+  GitBranch,
+  Calendar,
+  Archive,
+} from "lucide-react";
 
 import type { components } from "@octokit/openapi-types";
 
@@ -15,9 +22,11 @@ const RepoListItem: React.FC<RepoListItemProps> = ({ repo }) => {
         <span className={styles.repo_language}>{repo.language}</span>
       )}
       <h2 className={styles.repo_name}>
+        {repo.fork && <GitBranch />}
         <a href={repo.html_url} target="_blank" rel="noopener noreferrer">
           {repo.name}
         </a>
+        {repo.archived && <Archive />}
         <ExternalLink size={14} style={{ marginLeft: "6px" }} />
       </h2>
       <p className={styles.repo_description}>{repo.description}</p>
@@ -32,8 +41,18 @@ const RepoListItem: React.FC<RepoListItemProps> = ({ repo }) => {
           className={`${styles.repo_footer_forks} ${styles.repo_footer_numbers}`}
         >
           <GitFork />
-
           <span className={styles.number}>{repo.forks}</span>
+        </div>
+        <div
+          className={`${styles.repo_footer_updated} ${styles.repo_footer_numbers}`}
+        >
+          <Calendar />
+          <span className={styles.number}>
+            {new Date(repo.created_at).toLocaleDateString() !==
+            new Date(repo.pushed_at).toLocaleDateString()
+              ? `${new Date(repo.created_at).toLocaleDateString()} - ${new Date(repo.pushed_at).toLocaleDateString()}`
+              : new Date(repo.created_at).toLocaleDateString()}
+          </span>
         </div>
       </div>
     </div>

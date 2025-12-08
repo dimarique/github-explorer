@@ -7,9 +7,7 @@
   align-items: center;
   /* z-index: 6; */
   margin-bottom: 20px;
-  box-shadow:
-    rgba(0, 0, 0, 0.15) 0px 5px 5px,
-    rgba(0, 0, 0, 0.05) 0px 5px 50px;
+  box-shadow: var(--shadow-small);
   background-color: var(--bg-color);
   padding: 20px;
   width: 100%;
@@ -37,9 +35,9 @@
   flex: 0 0 50px;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
   border-radius: 10px;
   background-color: var(--primary-color);
-  /* padding: 10px; */
   aspect-ratio: 1 / 1;
   width: 50px;
 

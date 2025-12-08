@@ -10,7 +10,10 @@ export function useUserReposList(username: string) {
   );
   const url = `https://api.github.com/users/${username}/repos`;
   useEffect(() => {
-    if (!username) return;
+    if (!username) {
+      setUserReposList(null);
+      return;
+    }
     fetch(url)
       .then((res) => {
         if (!res.ok) {

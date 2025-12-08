@@ -15,7 +15,7 @@ const SearchField: React.FC<SearchFieldProps> = ({ setInputValue }) => {
     setLocalValue(value);
   };
   return (
-    <>
+    <div className={styles.search_wrapper}>
       <div className={styles.searchField}>
         <SearchInput
           localValue={localValue}
@@ -67,7 +67,7 @@ const SearchField: React.FC<SearchFieldProps> = ({ setInputValue }) => {
           </a>
         }
       </p>
-    </>
+    </div>
   );
 };
 

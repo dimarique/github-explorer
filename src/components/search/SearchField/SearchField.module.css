@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   border: 1px solid var(--primary-color);
-  border-radius: 20px;
+  border-radius: 30px;
   background-color: var(--bg-color);
   padding: 10px;
   width: 80%;
@@ -12,6 +12,10 @@
   a {
     cursor: pointer;
   }
+}
+
+searchField_wrapper {
+  width: 100%;
 }
 
 .hint {
