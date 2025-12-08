@@ -5,7 +5,7 @@
   border-radius: 30px;
   background-color: var(--bg-color);
   padding: 10px;
-  width: 80%;
+  /* width: 80%; */
   max-width: 1280px;
   color: var(--pimary-color);
 
@@ -14,7 +14,8 @@
   }
 }
 
-searchField_wrapper {
+.searchWrapper {
+  padding: 24px;
   width: 100%;
 }
 
