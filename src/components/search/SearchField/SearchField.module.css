@@ -23,9 +23,3 @@
   color: #bcbcbc;
   font-size: 12px;
 }
-
-@media screen and (max-width: 500px) {
-  .searchField {
-    width: 95%;
-  }
-}

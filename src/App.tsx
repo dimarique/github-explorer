@@ -33,7 +33,9 @@ function App() {
     <>
       <Header toggleTheme={toggleTheme} setInputValue={setInputValue} />
       <SearchField setInputValue={setInputValue} inputValue={inputValue} />
-      <ContentWrapper person={person} reposList={reposList} />
+      {(person || reposList) && (
+        <ContentWrapper person={person} reposList={reposList} />
+      )}
     </>
   );
 }

@@ -19,6 +19,9 @@
 }
 
 .repo_name {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   margin-bottom: 15px;
   text-align: left;
 
@@ -30,6 +33,10 @@
   a:hover {
     border-bottom: 1px solid currentColor;
   } */
+}
+
+a {
+  border-bottom: 1px solid transparent;
 }
 
 .repo_description {

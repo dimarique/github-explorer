@@ -23,10 +23,10 @@ const RepoListItem: React.FC<RepoListItemProps> = ({ repo }) => {
       )}
       <h2 className={styles.repo_name}>
         {repo.fork && <GitBranch />}
+        {repo.archived && <Archive />}
         <a href={repo.html_url} target="_blank" rel="noopener noreferrer">
           {repo.name}
         </a>
-        {repo.archived && <Archive />}
         <ExternalLink size={14} style={{ marginLeft: "6px" }} />
       </h2>
       <p className={styles.repo_description}>{repo.description}</p>
