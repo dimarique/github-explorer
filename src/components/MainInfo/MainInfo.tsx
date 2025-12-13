@@ -1,5 +1,12 @@
 import styles from "./MainInfo.module.css";
-import { Users, BookOpen, MapPin, Link, Calendar } from "lucide-react";
+import {
+  Users,
+  BookOpen,
+  MapPin,
+  Link,
+  Calendar,
+  Briefcase,
+} from "lucide-react";
 
 import type { components } from "@octokit/openapi-types";
 
@@ -50,6 +57,14 @@ const MainInfo: React.FC<MainInfoProps> = ({ person }) => {
                   })}
                   `}
                 </p>
+              </div>
+            </>
+          )}
+          {person.hireable && (
+            <>
+              <div className={styles.user_details_item}>
+                <Briefcase size={16} />
+                <p className={styles.user_hireable}>Available for hire</p>
               </div>
             </>
           )}

@@ -9,18 +9,19 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ toggleTheme, setInputValue }) => {
   return (
     <div className={styles.header}>
-      <div onClick={() => setInputValue("")} className={styles.icon}>
+      <div onClick={() => setInputValue("")} className={styles.logo}>
         <Github color={`var(--bg-color)`} size={24} />
       </div>
       <div className={styles.right}>
         <h1 className={styles.header_text}>GitHub Explorer</h1>
-        <SunMoon
-          onClick={() => toggleTheme()}
-          size={24}
-          style={{ cursor: "pointer" }}
-        />
         <p>Discover amaizing developers</p>
       </div>
+      <SunMoon
+        className={styles.theme_toggler}
+        onClick={() => toggleTheme()}
+        size={44}
+        style={{ cursor: "pointer" }}
+      />
     </div>
   );
 };

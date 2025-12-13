@@ -15,7 +15,7 @@ function App() {
   // const fullList = useFetchRepos(inputValue);
   useEffect(() => {
     console.log(reposList);
-    // console.log(person);
+    console.log(person);
   });
   useEffect(() => {
     if (person || reposList) {

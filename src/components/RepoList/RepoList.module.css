@@ -3,3 +3,39 @@
   flex-direction: column;
   gap: 8px;
 }
+
+.reposInfo {
+  text-align: left;
+}
+
+.reposListWrapper {
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  padding: 16px 0;
+  text-align: left;
+}
+
+.tab_header {
+  cursor: pointer;
+  margin-left: 1px;
+  box-shadow: 0 -3px 6px 0 rgba(0, 0, 0, 0.2) inset;
+  border: 1px solid var(--primary-color);
+  border-bottom: none;
+  border-radius: 5px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  padding: 2px 15px;
+  padding-bottom: 1px;
+}
+
+.tab_header:first-child {
+  margin-left: 10px;
+}
+
+.active {
+  position: relative;
+  z-index: 10;
+  box-shadow: none;
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+}

@@ -7,13 +7,12 @@
   --primary-color: #0f172a;
   --bg-color: #f8fafc;
   --shadow-small: rgba(0, 0, 0, 0.15) 0px 1px 1px;
+  --accent-blue: #2563eb;
 }
 
 [data-theme="dark"] {
-  /* --primary-color: #94a3b8; */
   --primary-color: #e2e8f0;
   --bg-color: #1e293b;
-  /* --bg-color: #0f172a; */
   --shadow-small: none;
 }
 

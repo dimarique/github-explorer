@@ -1,6 +1,6 @@
 .contentWrapper {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: clamp(320px, 40vw, 530px) 1fr;
   gap: 16px;
   margin-top: 24px;
   padding: 24px;
@@ -8,9 +8,9 @@
   max-width: 1280px;
 }
 
-@media (max-width: 860px) {
+@media (max-width: 800px) {
   .contentWrapper {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     padding: 8px;
   }
 }
