@@ -46,6 +46,7 @@
 }
 
 .theme_toggler {
+  cursor: pointer;
   margin-left: 5px;
   padding: 5px 6px;
 }

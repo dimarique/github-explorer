@@ -20,7 +20,6 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme, setInputValue }) => {
         className={styles.theme_toggler}
         onClick={() => toggleTheme()}
         size={44}
-        style={{ cursor: "pointer" }}
       />
     </div>
   );
