@@ -8,6 +8,10 @@
   border-radius: 8px;
   padding: 1.5rem;
   height: fit-content;
+
+  .section_header {
+    justify-self: flex-start;
+  }
 }
 
 .user_info_header {

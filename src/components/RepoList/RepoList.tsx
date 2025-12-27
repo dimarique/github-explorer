@@ -31,6 +31,7 @@ const RepoList: React.FC<RepoListProps> = ({ reposList }) => {
   }, [activeTab]);
   return (
     <div className={styles.reposInfo}>
+      <h2 className={styles.section_header}>Repositories</h2>
       <span
         onClick={() => setActiveTab("all")}
         className={`${styles.tab_header} ${activeTab === "all" ? styles.active : ""}`}

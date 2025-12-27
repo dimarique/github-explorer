@@ -3,7 +3,7 @@ import type { components } from "@octokit/openapi-types";
 
 type GithubUser = components["schemas"]["public-user"];
 
-export function useUserInfo(username: string): GithubUser {
+export function useUserInfo(username: string): GithubUser | null {
   const [person, setPerson] = useState<GithubUser | null>(null);
   const url = "https://api.github.com/users/";
   const searchPattern = `${url}${username}`;
