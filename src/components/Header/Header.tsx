@@ -19,7 +19,7 @@ const Header: React.FC<HeaderProps> = ({ toggleTheme, setInputValue }) => {
       <SunMoon
         className={styles.theme_toggler}
         onClick={() => toggleTheme()}
-        size={44}
+        size={54}
       />
     </div>
   );
