@@ -13,10 +13,10 @@ function App() {
 	const person = useUserInfo(inputValue);
 	const reposList = useUserReposList(inputValue);
 	// const fullList = useFetchRepos(inputValue);
-	useEffect(() => {
+	/* useEffect(() => {
 		console.log(reposList);
 		console.log(person);
-	});
+	}); */
 	useEffect(() => {
 		if (person || reposList) {
 			window.scrollTo({ top: 250, behavior: "smooth" });

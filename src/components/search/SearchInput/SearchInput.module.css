@@ -1,24 +1,24 @@
 .searchInput {
-  width: inherit;
+	width: 100%;
 }
 
 .searchInput input {
-  all: unset;
-  appearance: none;
-  margin: 0;
-  outline: none;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-  background-image: none;
-  background-color: transparent;
-  padding: 0;
-  padding-left: 20px;
-  width: 100%;
-  height: 100%;
-  text-align: left;
+	all: unset;
+	appearance: none;
+	margin: 0;
+	outline: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	background-image: none;
+	background-color: transparent;
+	padding: 0;
+	padding-left: 20px;
+	width: 100%;
+	height: 100%;
+	text-align: left;
 
-  :focus {
-    outline: none;
-  }
+	:focus {
+		outline: none;
+	}
 }
