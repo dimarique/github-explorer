@@ -2,9 +2,13 @@ import { useEffect, useState } from "react";
 import type { components } from "@octokit/openapi-types";
 
 type GithubUser = components["schemas"]["public-user"];
-
-export function useUserInfo(username: string): GithubUser | null {
+type UseUserInfoReturn = {
+  person: GithubUser | null;
+  loading: boolean;
+};
+export function useUserInfo(username: string): UseUserInfoReturn {
   const [person, setPerson] = useState<GithubUser | null>(null);
+  const [loading, setLoading] = useState(false);
   const url = "https://api.github.com/users/";
   const searchPattern = `${url}${username}`;
   useEffect(() => {
@@ -12,7 +16,7 @@ export function useUserInfo(username: string): GithubUser | null {
       setPerson(null);
       return;
     }
-
+    setLoading(true);
     fetch(searchPattern)
       .then((res) => {
         if (!res.ok) {
@@ -25,7 +29,10 @@ export function useUserInfo(username: string): GithubUser | null {
       })
       .catch(() => {
         setPerson(null);
+      })
+      .finally(() => {
+        setLoading(false);
       });
   }, [username]);
-  return person;
+  return { person, loading };
 }

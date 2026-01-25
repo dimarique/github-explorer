@@ -10,12 +10,13 @@ import ContentWrapper from "./components/ContentWrapper/ContentWrapper";
 function App() {
 	const [isDark, setIsDark] = useState(false);
 	const [inputValue, setInputValue] = useState("");
-	const person = useUserInfo(inputValue);
+	const { person, loading } = useUserInfo(inputValue);
 	const reposList = useUserReposList(inputValue);
 	// const fullList = useFetchRepos(inputValue);
 	/* useEffect(() => {
 		console.log(reposList);
 		console.log(person);
+		console.log(loading);
 	}); */
 	useEffect(() => {
 		if (person || reposList) {
@@ -33,8 +34,12 @@ function App() {
 		<>
 			<Header toggleTheme={toggleTheme} setInputValue={setInputValue} />
 			<SearchField setInputValue={setInputValue} inputValue={inputValue} />
-			{(person || reposList) && (
-				<ContentWrapper person={person} reposList={reposList} />
+			{loading ? (
+				<div>Loading...</div>
+			) : (
+				(person || reposList) && (
+					<ContentWrapper person={person} reposList={reposList} />
+				)
 			)}
 		</>
 	);
