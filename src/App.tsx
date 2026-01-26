@@ -10,19 +10,20 @@ import ContentWrapper from "./components/ContentWrapper/ContentWrapper";
 function App() {
 	const [isDark, setIsDark] = useState(false);
 	const [inputValue, setInputValue] = useState("");
-	const { person, loading } = useUserInfo(inputValue);
-	const reposList = useUserReposList(inputValue);
+	const { person, isUserLoading } = useUserInfo(inputValue);
+	const { userReposList, isRepoLoading } = useUserReposList(inputValue);
+	const isLoading = isUserLoading || isRepoLoading
 	// const fullList = useFetchRepos(inputValue);
-	/* useEffect(() => {
-		console.log(reposList);
-		console.log(person);
-		console.log(loading);
-	}); */
 	useEffect(() => {
-		if (person || reposList) {
+		// console.log(reposList);
+		console.log(person);
+		// console.log(loading);
+	});
+	useEffect(() => {
+		if (person || userReposList) {
 			window.scrollTo({ top: 250, behavior: "smooth" });
 		}
-	}, [person, reposList]);
+	}, [person, userReposList]);
 	const toggleTheme = () => {
 		setIsDark(!isDark);
 		document.documentElement.setAttribute(
@@ -34,11 +35,11 @@ function App() {
 		<>
 			<Header toggleTheme={toggleTheme} setInputValue={setInputValue} />
 			<SearchField setInputValue={setInputValue} inputValue={inputValue} />
-			{loading ? (
+			{isLoading ? (
 				<div>Loading...</div>
 			) : (
-				(person || reposList) && (
-					<ContentWrapper person={person} reposList={reposList} />
+				(person || userReposList) && (
+					<ContentWrapper person={person} reposList={userReposList} />
 				)
 			)}
 		</>
