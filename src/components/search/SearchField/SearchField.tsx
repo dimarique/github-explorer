@@ -5,7 +5,6 @@ import { useState } from "react";
 
 interface SearchFieldProps {
   setInputValue: (value: string) => void;
-  inputValue: string;
 }
 
 const SearchField: React.FC<SearchFieldProps> = ({ setInputValue }) => {
