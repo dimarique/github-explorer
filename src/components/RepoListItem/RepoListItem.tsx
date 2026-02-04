@@ -22,13 +22,29 @@ const RepoListItem: React.FC<RepoListItemProps> = ({ repo }) => {
         <span className={styles.repo_language}>{repo.language}</span>
       )}
       <h2 className={styles.repo_name}>
-        {repo.fork && <GitBranch />}
-        {repo.archived && <Archive />}
+        {repo.fork && (
+          <span title="Forked" style={{ display: "inline-flex" }}>
+            <GitBranch />
+          </span>
+        )}
+        {repo.archived && (
+          <span title="Archived" style={{ display: "inline-flex" }}>
+            <Archive />
+          </span>
+        )}
         <a href={repo.html_url} target="_blank" rel="noopener noreferrer">
           {repo.name}
         </a>
         <ExternalLink size={14} style={{ marginLeft: "6px" }} />
       </h2>
+      <a
+        href={repo.homepage}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={styles.repo_homepage}
+      >
+        {repo.homepage}
+      </a>
       <p className={styles.repo_description}>{repo.description}</p>
       <div className={styles.repo_footer}>
         <div

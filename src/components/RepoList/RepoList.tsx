@@ -4,14 +4,16 @@ import { useEffect, useState } from "react";
 
 import type { components } from "@octokit/openapi-types";
 
+type GithubUser = components["schemas"]["public-user"];
 type GithubRepo = components["schemas"]["repository"];
 type GithubReposList = GithubRepo[];
 
 interface RepoListProps {
   reposList: GithubReposList;
+  person: GithubUser;
 }
 
-const RepoList: React.FC<RepoListProps> = ({ reposList }) => {
+const RepoList: React.FC<RepoListProps> = ({ reposList, person }) => {
   const [activeTab, setActiveTab] = useState<"all" | "archived" | "starred">(
     "all",
   );
@@ -30,8 +32,10 @@ const RepoList: React.FC<RepoListProps> = ({ reposList }) => {
     console.log(activeTab);
   }, [activeTab]);
   return (
-    <div className={styles.reposInfo}>
-      <h2 className={styles.section_header}>Repositories</h2>
+    <div className={styles.repos_info}>
+      <h2
+        className={styles.section_header}
+      >{`Repositories by ${person.name}`}</h2>
       <span
         onClick={() => setActiveTab("all")}
         className={`${styles.tab_header} ${activeTab === "all" ? styles.active : ""}`}
@@ -50,8 +54,8 @@ const RepoList: React.FC<RepoListProps> = ({ reposList }) => {
       >
         archived
       </span>
-      <div className={styles.reposListWrapper}>
-        <div className={styles.repoList}>
+      <div className={styles.repos_list_wrapper}>
+        <div className={styles.repo_list}>
           {filterRepos().map((el) => {
             return <RepoListItem key={el.id} repo={el} />;
           })}
