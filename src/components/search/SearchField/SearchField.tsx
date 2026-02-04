@@ -30,7 +30,7 @@ const SearchField: React.FC<SearchFieldProps> = ({ setInputValue }) => {
           />
         </div>
         <p className={styles.hint}>
-          Try searching:{" "}
+          Try:{" "}
           {
             <a
               style={{ cursor: "pointer" }}

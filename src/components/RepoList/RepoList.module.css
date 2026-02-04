@@ -1,7 +1,6 @@
 .repo_list {
   display: flex;
   flex-direction: column;
-  gap: 8px;
 }
 
 .repos_info {
@@ -9,33 +8,32 @@
 }
 
 .repos_list_wrapper {
-  border: 1px solid var(--primary-color);
-  border-radius: 5px;
   padding: 16px 0;
   text-align: left;
 }
-
-.tab_header {
-  cursor: pointer;
-  margin-left: 1px;
-  box-shadow: 0 -3px 6px 0 rgba(0, 0, 0, 0.2) inset;
+.tabname_wrapper {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
   border: 1px solid var(--primary-color);
-  border-bottom: none;
-  border-radius: 5px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
+  border-radius: 20px;
+}
+.tabname {
+  cursor: pointer;
+  margin: 3px 6px;
   padding: 2px 15px;
   padding-bottom: 1px;
 }
 
-.tab_header:first-child {
+.tabname:first-child {
   margin-left: 10px;
 }
 
 .active {
   position: relative;
   z-index: 10;
-  box-shadow: none;
+  border: 1px solid color-mix(in srgb, var(--primary-color) 40%, transparent);
+  border-radius: 15px;
   background-color: var(--bg-color);
   color: var(--primary-color);
 }

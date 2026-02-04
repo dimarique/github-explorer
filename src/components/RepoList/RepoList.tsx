@@ -36,24 +36,26 @@ const RepoList: React.FC<RepoListProps> = ({ reposList, person }) => {
       <h2
         className={styles.section_header}
       >{`Repositories by ${person.name}`}</h2>
-      <span
-        onClick={() => setActiveTab("all")}
-        className={`${styles.tab_header} ${activeTab === "all" ? styles.active : ""}`}
-      >
-        all
-      </span>
-      <span
-        onClick={() => setActiveTab("starred")}
-        className={`${styles.tab_header} ${activeTab === "starred" ? styles.active : ""}`}
-      >
-        starred
-      </span>
-      <span
-        onClick={() => setActiveTab("archived")}
-        className={`${styles.tab_header} ${activeTab === "archived" ? styles.active : ""}`}
-      >
-        archived
-      </span>
+      <div className={styles.tabname_wrapper}>
+        <span
+          onClick={() => setActiveTab("all")}
+          className={`${styles.tabname} ${activeTab === "all" ? styles.active : ""}`}
+        >
+          all
+        </span>
+        <span
+          onClick={() => setActiveTab("starred")}
+          className={`${styles.tabname} ${activeTab === "starred" ? styles.active : ""}`}
+        >
+          starred
+        </span>
+        <span
+          onClick={() => setActiveTab("archived")}
+          className={`${styles.tabname} ${activeTab === "archived" ? styles.active : ""}`}
+        >
+          archived
+        </span>
+      </div>
       <div className={styles.repos_list_wrapper}>
         <div className={styles.repo_list}>
           {filterRepos().map((el) => {

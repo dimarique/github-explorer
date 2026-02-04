@@ -1,10 +1,12 @@
 .repoListItem {
   position: relative;
-  box-shadow: 0 -6px 6px 0 rgba(0, 0, 0, 0.2);
-  border-top: 1px solid var(--primary-color);
-  border-radius: 10px;
-  padding: 10px;
+  border-top: 1px solid
+    color-mix(in srgb, var(--primary-color) 40%, transparent);
+  padding: 20px 5px;
   width: 100%;
+}
+.repoListItem:first-child {
+  border-top: 1px solid transparent;
 }
 
 .repo_language {
@@ -30,9 +32,12 @@ a {
   border-bottom: 1px solid transparent;
 }
 .repo_homepage {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  margin-bottom: 0.5rem;
   border-bottom: 1px solid var(--primary-color);
   font-size: 0.8rem;
-  line-height: 2rem;
 }
 .repo_description {
   margin-bottom: 15px;

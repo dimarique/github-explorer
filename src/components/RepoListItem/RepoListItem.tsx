@@ -35,7 +35,7 @@ const RepoListItem: React.FC<RepoListItemProps> = ({ repo }) => {
         <a href={repo.html_url} target="_blank" rel="noopener noreferrer">
           {repo.name}
         </a>
-        <ExternalLink size={14} style={{ marginLeft: "6px" }} />
+        <ExternalLink size={14} />
       </h2>
       <a
         href={repo.homepage}
@@ -44,6 +44,7 @@ const RepoListItem: React.FC<RepoListItemProps> = ({ repo }) => {
         className={styles.repo_homepage}
       >
         {repo.homepage}
+        {repo.homepage && <ExternalLink size={12} />}
       </a>
       <p className={styles.repo_description}>{repo.description}</p>
       <div className={styles.repo_footer}>
