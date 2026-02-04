@@ -21,7 +21,7 @@ const ContentWrapper: React.FC<ContentWrapperProps> = ({
   return (
     <div className={styles.contentWrapper}>
       <MainInfo person={person} />
-      <RepoList reposList={reposList} />
+      <RepoList person={person} reposList={reposList} />
     </div>
   );
 };

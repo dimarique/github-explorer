@@ -1,14 +1,14 @@
-.repoList {
+.repo_list {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 
-.reposInfo {
+.repos_info {
   text-align: left;
 }
 
-.reposListWrapper {
+.repos_list_wrapper {
   border: 1px solid var(--primary-color);
   border-radius: 5px;
   padding: 16px 0;

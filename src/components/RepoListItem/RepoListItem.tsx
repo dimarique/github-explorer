@@ -29,6 +29,14 @@ const RepoListItem: React.FC<RepoListItemProps> = ({ repo }) => {
         </a>
         <ExternalLink size={14} style={{ marginLeft: "6px" }} />
       </h2>
+      <a
+        href={repo.homepage}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={styles.repo_homepage}
+      >
+        {repo.homepage}
+      </a>
       <p className={styles.repo_description}>{repo.description}</p>
       <div className={styles.repo_footer}>
         <div
