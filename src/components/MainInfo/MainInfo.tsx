@@ -20,6 +20,7 @@ const MainInfo: React.FC<MainInfoProps> = ({ person }) => {
   return (
     person && (
       <div className={styles.user_info}>
+        <h2 className={styles.section_header}>Main user info</h2>
         <div className={styles.user_info_header}>
           <img className={styles.user_image} src={person?.avatar_url} alt="" />
           <div className={styles.user_name_block}>

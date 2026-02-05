@@ -33,9 +33,7 @@ const RepoList: React.FC<RepoListProps> = ({ reposList, person }) => {
   }, [activeTab]);
   return (
     <div className={styles.repos_info}>
-      <h2
-        className={styles.section_header}
-      >{`Repositories by ${person.name}`}</h2>
+      <h2 className={styles.section_header}>Repositories</h2>
       <div className={styles.tabname_wrapper}>
         <span
           onClick={() => setActiveTab("all")}

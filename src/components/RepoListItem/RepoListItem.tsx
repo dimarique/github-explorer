@@ -37,15 +37,29 @@ const RepoListItem: React.FC<RepoListItemProps> = ({ repo }) => {
         </a>
         <ExternalLink size={14} />
       </h2>
-      <a
-        href={repo.homepage}
-        target="_blank"
-        rel="noopener noreferrer"
-        className={styles.repo_homepage}
-      >
-        {repo.homepage}
-        {repo.homepage && <ExternalLink size={12} />}
-      </a>
+
+      <p className={styles.number}>
+        Created at {new Date(repo.created_at).toLocaleDateString()}
+      </p>
+      {new Date(repo.created_at).toLocaleDateString() !==
+      new Date(repo.pushed_at).toLocaleDateString() ? (
+        <p className={styles.number}>
+          Last push at {new Date(repo.pushed_at).toLocaleDateString()}
+        </p>
+      ) : (
+        ""
+      )}
+      {repo.homepage && (
+        <a
+          href={repo.homepage}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.repo_homepage}
+        >
+          {repo.homepage}
+          {repo.homepage && <ExternalLink size={12} />}
+        </a>
+      )}
       <p className={styles.repo_description}>{repo.description}</p>
       <div className={styles.repo_footer}>
         <div
@@ -62,15 +76,7 @@ const RepoListItem: React.FC<RepoListItemProps> = ({ repo }) => {
         </div>
         <div
           className={`${styles.repo_footer_updated} ${styles.repo_footer_numbers}`}
-        >
-          <Calendar />
-          <span className={styles.number}>
-            {new Date(repo.created_at).toLocaleDateString() !==
-            new Date(repo.pushed_at).toLocaleDateString()
-              ? `${new Date(repo.created_at).toLocaleDateString()} - ${new Date(repo.pushed_at).toLocaleDateString()}`
-              : new Date(repo.created_at).toLocaleDateString()}
-          </span>
-        </div>
+        ></div>
       </div>
     </div>
   );

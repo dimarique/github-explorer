@@ -24,10 +24,12 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
   text-align: left;
 }
-
+.number {
+  font-size: 11px;
+}
 a {
   border-bottom: 1px solid transparent;
 }
@@ -40,7 +42,8 @@ a {
   font-size: 0.8rem;
 }
 .repo_description {
-  margin-bottom: 15px;
+  margin-top: 0.7rem;
+  margin-bottom: 1rem;
   text-align: left;
 }
 
