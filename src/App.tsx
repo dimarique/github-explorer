@@ -10,9 +10,14 @@ function App() {
   const [isDark, setIsDark] = useState(false);
   const [inputValue, setInputValue] = useState("");
   const { person, isUserLoading, userError } = useUserInfo(inputValue);
-  const { userReposList, isRepoLoading, repoError } = useUserReposList(
-    person ? inputValue : "",
-  );
+  const {
+    userReposList,
+    isRepoLoading,
+    repoError,
+    goToNextPage,
+    goToPrevPage,
+    page,
+  } = useUserReposList(person ? inputValue : "");
   const isLoading = isUserLoading || isRepoLoading;
   const error = userError || repoError;
   useEffect(() => {
@@ -36,13 +41,19 @@ function App() {
     <>
       <Header toggleTheme={toggleTheme} setInputValue={setInputValue} />
       <SearchField setInputValue={setInputValue} />
-      {error &&  <div className="error">{error}</div>}
+      {error && <div className="error">{error}</div>}
       {isLoading ? (
         <div>Loading...</div>
       ) : (
         person &&
         userReposList && (
-          <ContentWrapper person={person} reposList={userReposList} />
+          <ContentWrapper
+            person={person}
+            onNextPage={goToNextPage}
+            onPrevPage={goToPrevPage}
+            reposList={userReposList}
+            page={page}
+          />
         )
       )}
     </>

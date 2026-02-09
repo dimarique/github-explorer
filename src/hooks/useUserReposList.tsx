@@ -10,8 +10,16 @@ export function useUserReposList(username: string) {
   );
   const [isRepoLoading, setIsRepoLoading] = useState(false);
   const [repoError, setRepoError] = useState(false);
-  const url = `https://api.github.com/users/${username}/repos`;
+  const [page, setPage] = useState(1);
+  // const url = `https://api.github.com/users/${username}/repos?page=2&per_page=100`;
+  const url = `https://api.github.com/users/${username}/repos?page=${page}`;
 
+  const goToNextPage = () => {
+    setPage((prev) => prev + 1);
+  };
+  const goToPrevPage = () => {
+    setPage((prev) => Math.max(1, prev - 1));
+  };
   useEffect(() => {
     if (!username) {
       setUserReposList(null);
@@ -21,6 +29,8 @@ export function useUserReposList(username: string) {
     setRepoError(null);
     fetch(url)
       .then((res) => {
+        console.log(`Link is ${res.headers.get("Link")}`);
+
         if (!res.ok) {
           throw new Error("Something wrong");
         }
@@ -36,6 +46,16 @@ export function useUserReposList(username: string) {
       .finally(() => {
         setIsRepoLoading(false);
       });
+  }, [username, page]);
+  useEffect(() => {
+    setPage(1);
   }, [username]);
-  return { userReposList, isRepoLoading, repoError };
+  return {
+    userReposList,
+    isRepoLoading,
+    repoError,
+    goToNextPage,
+    goToPrevPage,
+    page,
+  };
 }

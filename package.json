@@ -12,6 +12,7 @@
   "dependencies": {
     "@octokit/openapi-types": "^27.0.0",
     "lucide-react": "^0.554.0",
+    "octokit": "^5.0.5",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
   },
@@ -21,6 +22,7 @@
     "@types/react": "^19.2.2",
     "@types/react-dom": "^19.2.2",
     "@vitejs/plugin-react": "^5.1.0",
+    "babel-plugin-react-compiler": "^1.0.0",
     "baseline-browser-mapping": "^2.9.18",
     "eslint": "^9.39.1",
     "eslint-plugin-react-hooks": "^7.0.1",

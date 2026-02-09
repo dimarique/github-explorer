@@ -12,16 +12,28 @@ type GithubUser = components["schemas"]["public-user"];
 interface ContentWrapperProps {
   person: GithubUser;
   reposList: GithubReposList;
+  onNextPage: () => void;
+  onPrevPage: () => void;
+  page: number;
 }
 
 const ContentWrapper: React.FC<ContentWrapperProps> = ({
   person,
   reposList,
+  onNextPage,
+  onPrevPage,
+  page,
 }) => {
   return (
     <div className={styles.contentWrapper}>
       <MainInfo person={person} />
-      <RepoList person={person} reposList={reposList} />
+      <RepoList
+        person={person}
+        reposList={reposList}
+        onNextPage={onNextPage}
+        onPrevPage={onPrevPage}
+        page={page}
+      />
     </div>
   );
 };

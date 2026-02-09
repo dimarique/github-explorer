@@ -25,7 +25,9 @@
   align-items: center;
   gap: 0.5rem;
   margin-bottom: 5px;
+  max-width: 80%;
   text-align: left;
+  word-break: break-word;
 }
 .number {
   font-size: 11px;
@@ -45,6 +47,7 @@ a {
   margin-top: 0.7rem;
   margin-bottom: 1rem;
   text-align: left;
+  word-break: break-word;
 }
 
 .repo_footer {

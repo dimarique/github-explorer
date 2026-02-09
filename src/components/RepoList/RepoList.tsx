@@ -11,9 +11,18 @@ type GithubReposList = GithubRepo[];
 interface RepoListProps {
   reposList: GithubReposList;
   person: GithubUser;
+  onNextPage: () => void;
+  onPrevPage: () => void;
+  page: number;
 }
 
-const RepoList: React.FC<RepoListProps> = ({ reposList, person }) => {
+const RepoList: React.FC<RepoListProps> = ({
+  reposList,
+  person,
+  onNextPage,
+  onPrevPage,
+  page,
+}) => {
   const [activeTab, setActiveTab] = useState<"all" | "archived" | "starred">(
     "all",
   );
@@ -60,6 +69,11 @@ const RepoList: React.FC<RepoListProps> = ({ reposList, person }) => {
             return <RepoListItem key={el.id} repo={el} />;
           })}
         </div>
+      </div>
+      <div className={styles.buttons_wrapper}>
+        <button onClick={() => onPrevPage()}>Prev</button>
+        <span>{page}</span>
+        <button onClick={() => onNextPage()}>Next</button>
       </div>
     </div>
   );
