@@ -28,7 +28,6 @@ const ContentWrapper: React.FC<ContentWrapperProps> = ({
     <div className={styles.contentWrapper}>
       <MainInfo person={person} />
       <RepoList
-        person={person}
         reposList={reposList}
         onNextPage={onNextPage}
         onPrevPage={onPrevPage}

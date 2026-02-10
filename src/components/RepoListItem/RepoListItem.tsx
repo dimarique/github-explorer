@@ -1,12 +1,5 @@
 import styles from "./RepoListItem.module.css";
-import {
-  Star,
-  GitFork,
-  ExternalLink,
-  GitBranch,
-  Calendar,
-  Archive,
-} from "lucide-react";
+import { Star, GitFork, ExternalLink, GitBranch, Archive } from "lucide-react";
 
 import type { components } from "@octokit/openapi-types";
 
@@ -34,8 +27,8 @@ const RepoListItem: React.FC<RepoListItemProps> = ({ repo }) => {
         )}
         <a href={repo.html_url} target="_blank" rel="noopener noreferrer">
           {repo.name}
+          <ExternalLink size={14} />
         </a>
-        <ExternalLink size={14} />
       </h2>
 
       <p className={styles.number}>
