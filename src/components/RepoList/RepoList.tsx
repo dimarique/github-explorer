@@ -4,13 +4,11 @@ import { useEffect, useState } from "react";
 
 import type { components } from "@octokit/openapi-types";
 
-type GithubUser = components["schemas"]["public-user"];
 type GithubRepo = components["schemas"]["repository"];
 type GithubReposList = GithubRepo[];
 
 interface RepoListProps {
   reposList: GithubReposList;
-  person: GithubUser;
   onNextPage: () => void;
   onPrevPage: () => void;
   page: number;
@@ -18,7 +16,6 @@ interface RepoListProps {
 
 const RepoList: React.FC<RepoListProps> = ({
   reposList,
-  person,
   onNextPage,
   onPrevPage,
   page,
