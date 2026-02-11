@@ -34,9 +34,11 @@ const RepoList: React.FC<RepoListProps> = ({
     }
     return reposList;
   };
+
   useEffect(() => {
     console.log(activeTab);
   }, [activeTab]);
+
   return (
     <div className={styles.repos_info}>
       <h2 className={styles.section_header}>Repositories</h2>
@@ -68,9 +70,11 @@ const RepoList: React.FC<RepoListProps> = ({
         </div>
       </div>
       <div className={styles.buttons_wrapper}>
-        <button onClick={() => onPrevPage()}>Prev</button>
-        <span>{page}</span>
-        <button onClick={() => onNextPage()}>Next</button>
+        {page > 1 && <button onClick={() => onPrevPage()}>Prev</button>}
+        {(page > 1 || reposList.length === 30) && <span>{page}</span>}
+        {reposList.length === 30 && (
+          <button onClick={() => onNextPage()}>Next</button>
+        )}
       </div>
     </div>
   );
