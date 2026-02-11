@@ -17,9 +17,11 @@ export function useUserReposList(username: string) {
   const goToNextPage = () => {
     setPage((prev) => prev + 1);
   };
+
   const goToPrevPage = () => {
     setPage((prev) => Math.max(1, prev - 1));
   };
+
   useEffect(() => {
     if (!username) {
       setUserReposList(null);
@@ -47,9 +49,11 @@ export function useUserReposList(username: string) {
         setIsRepoLoading(false);
       });
   }, [username, page]);
+
   useEffect(() => {
     setPage(1);
   }, [username]);
+
   return {
     userReposList,
     isRepoLoading,

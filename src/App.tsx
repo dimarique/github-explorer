@@ -20,10 +20,12 @@ function App() {
   } = useUserReposList(person ? inputValue : "");
   const isLoading = isUserLoading || isRepoLoading;
   const error = userError || repoError;
+
   useEffect(() => {
     console.log(userReposList);
     console.log(person);
   });
+
   useEffect(() => {
     if (person || userReposList) {
       window.scrollTo({ top: 250, behavior: "smooth" });
