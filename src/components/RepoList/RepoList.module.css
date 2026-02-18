@@ -8,7 +8,7 @@
 }
 
 .repos_list_wrapper {
-  padding: 16px 0;
+  padding: 1rem;
   text-align: left;
 }
 .tabname_wrapper {
@@ -40,10 +40,24 @@
 
 .section_header {
   margin-bottom: 1rem;
+  padding: 1rem;
+  font-size: 2rem;
 }
 .buttons_wrapper {
   display: flex;
   justify-content: center;
   gap: 1rem;
   margin-bottom: 3rem;
+}
+@media (max-width: 800px) {
+  .section_header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    /* border-radius: 8px 8px 0 0; */
+    /* border: 1px solid rgba(22, 78, 99, 0.3); */
+    background: rgba(22, 78, 99, 0.3);
+  }
 }
