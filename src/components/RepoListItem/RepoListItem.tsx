@@ -10,7 +10,7 @@ interface RepoListItemProps {
 
 const RepoListItem: React.FC<RepoListItemProps> = ({ repo }) => {
   return (
-    <div className={styles.repoListItem}>
+    <div className={styles.repo_list_item}>
       {repo.language && (
         <span className={styles.repo_language}>{repo.language}</span>
       )}
