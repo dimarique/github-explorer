@@ -9,17 +9,9 @@ type GithubReposList = GithubRepo[];
 
 interface RepoListProps {
   reposList: GithubReposList;
-  onNextPage: () => void;
-  onPrevPage: () => void;
-  page: number;
 }
 
-const RepoList: React.FC<RepoListProps> = ({
-  reposList,
-  onNextPage,
-  onPrevPage,
-  page,
-}) => {
+const RepoList: React.FC<RepoListProps> = ({ reposList }) => {
   return (
     <div className={styles.repos_info}>
       <SectionHeader text="Repositories" />
@@ -29,13 +21,6 @@ const RepoList: React.FC<RepoListProps> = ({
             return <RepoListItem key={el.id} repo={el} />;
           })}
         </div>
-      </div>
-      <div className={styles.buttons_wrapper}>
-        {page > 1 && <button onClick={() => onPrevPage()}>Prev</button>}
-        {(page > 1 || reposList.length === 30) && <span>{page}</span>}
-        {reposList.length === 30 && (
-          <button onClick={() => onNextPage()}>Next</button>
-        )}
       </div>
     </div>
   );
