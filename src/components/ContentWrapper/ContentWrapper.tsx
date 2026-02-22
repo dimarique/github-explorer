@@ -1,3 +1,4 @@
+import { Footer } from "../Footer/Footer";
 import MainInfo from "../MainInfo/MainInfo";
 import Navigation from "../Navigation/Navigation";
 import RepoList from "../RepoList/RepoList";
@@ -36,6 +37,7 @@ const ContentWrapper: React.FC<ContentWrapperProps> = ({
         page={page}
         reposList={reposList}
       />
+      <Footer />
     </>
   );
 };
