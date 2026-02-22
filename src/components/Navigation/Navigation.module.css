@@ -1,0 +1,6 @@
+.buttons_wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
