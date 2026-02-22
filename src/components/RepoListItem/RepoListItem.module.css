@@ -2,13 +2,14 @@
   position: relative;
   border-top: 1px solid
     color-mix(in srgb, var(--primary-color) 40%, transparent);
+  padding-top: 1rem;
   /* padding: 5px; */
-  padding-bottom: 20px;
+  padding-bottom: 2rem;
   width: 100%;
 }
-/* .repoListItem:first-child {
+.repo_list_item:first-child {
   border-top: 1px solid transparent;
-} */
+}
 
 .repo_language {
   position: absolute;

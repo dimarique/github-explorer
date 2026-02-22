@@ -7,6 +7,7 @@ import {
   Calendar,
   Briefcase,
 } from "lucide-react";
+import SectionHeader from "../SectionHeader/SectionHeader";
 
 import type { components } from "@octokit/openapi-types";
 
@@ -20,7 +21,7 @@ const MainInfo: React.FC<MainInfoProps> = ({ person }) => {
   return (
     person && (
       <div className={styles.user_info}>
-        <h2 className={styles.section_header}>Main user info</h2>
+        <SectionHeader text="Main User info" />
         <div className={styles.user_info_wrapper}>
           <div className={styles.user_info_header}>
             <img
