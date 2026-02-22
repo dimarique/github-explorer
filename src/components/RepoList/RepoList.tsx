@@ -1,4 +1,5 @@
 import RepoListItem from "../RepoListItem/RepoListItem";
+import SectionHeader from "../SectionHeader/SectionHeader";
 import styles from "./RepoList.module.css";
 
 import type { components } from "@octokit/openapi-types";
@@ -21,7 +22,7 @@ const RepoList: React.FC<RepoListProps> = ({
 }) => {
   return (
     <div className={styles.repos_info}>
-      <h2 className={styles.section_header}>Repositories</h2>
+      <SectionHeader text="Repositories" />
       <div className={styles.repos_list_wrapper}>
         <div className={styles.repo_list}>
           {reposList.map((el) => {

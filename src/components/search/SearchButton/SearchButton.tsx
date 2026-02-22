@@ -20,7 +20,7 @@ const SearchButton: React.FC<SearchButtonProps> = ({
         }}
         className={styles.searchButton}
       >
-        Find
+        Find →
       </button>
     </>
   );
