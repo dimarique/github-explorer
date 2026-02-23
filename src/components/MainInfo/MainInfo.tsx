@@ -40,6 +40,7 @@ const MainInfo: React.FC<MainInfoProps> = ({ person }) => {
               <>
                 <div className={styles.user_details_item}>
                   <MapPin size={16} />
+
                   <p className={styles.user_location}>{person?.location}</p>
                 </div>
               </>
@@ -48,7 +49,14 @@ const MainInfo: React.FC<MainInfoProps> = ({ person }) => {
               <>
                 <div className={styles.user_details_item}>
                   <Link size={16} />
-                  <p className={styles.user_blog}>{person?.blog}</p>
+                  <a
+                    href={person?.blog}
+                    className={styles.user_blog}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {person?.blog}
+                  </a>
                 </div>
               </>
             )}
