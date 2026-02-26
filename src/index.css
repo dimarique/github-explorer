@@ -4,10 +4,8 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
   --primary-color: #164e63;
-  /* --bg-color: #e0f2fe; */
-  /* --accent-blue: #db2777; */
-  /* --primary-color: #0f172a; */
   --bg-color: #f8fafc;
   --accent-blue: #2563eb;
   --shadow-small: rgba(0, 0, 0, 0.15) 0px 1px 1px;
