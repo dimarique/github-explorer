@@ -8,7 +8,6 @@ import ContentWrapper from "./components/ContentWrapper/ContentWrapper";
 import GoUpButton from "./components/GoUpButton/GoUpButton";
 
 function App() {
-  const [isDark, setIsDark] = useState(false);
   const [inputValue, setInputValue] = useState("");
   const [isVisible, setIsVisible] = useState(false);
   const { person, isUserLoading, userError } = useUserInfo(inputValue);
@@ -33,14 +32,6 @@ function App() {
       window.scrollTo({ top: 250, behavior: "smooth" });
     }
   }, [person, userReposList]);
-  const toggleTheme = () => {
-    setIsDark(!isDark);
-    document.documentElement.setAttribute(
-      "data-theme",
-      !isDark ? "dark" : "light",
-    );
-    localStorage.setItem("theme", String(isDark));
-  };
 
   useEffect(() => {
     const handleScroll = () => setIsVisible(window.scrollY > 300);
@@ -49,6 +40,9 @@ function App() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const toggleTheme = () => {
+    console.log("temporary");
+  };
   return (
     <>
       <Header toggleTheme={toggleTheme} setInputValue={setInputValue} />

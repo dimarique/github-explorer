@@ -14,7 +14,9 @@ const RepoListItem: React.FC<RepoListItemProps> = ({ repo }) => {
       {repo.language && (
         <span className={styles.repo_language}>{repo.language}</span>
       )}
-      <h2 className={styles.repo_name}>
+      <h2
+        className={`${styles.repo_name} ${!repo.language ? styles.repoNameFull : ""}`}
+      >
         {repo.fork && (
           <span title="Forked" style={{ display: "inline-flex" }}>
             <GitBranch />
