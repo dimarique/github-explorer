@@ -12,6 +12,9 @@
   border-radius: 1.5rem;
   background-color: var(--bg-color);
   padding: 0;
+  aspect-ratio: 1 / 1.5;
   width: 3rem;
-  height: 3rem;
+  & button {
+    zoom: 3;
+  }
 }
