@@ -5,11 +5,7 @@ interface SectionHeaderProps {
 }
 
 const SectionHeader: React.FC<SectionHeaderProps> = ({ text }) => {
-  return (
-    <div>
-      <h2 className={styles.section_header}>{text}</h2>
-    </div>
-  );
+  return <h2 className={styles.section_header}>{text}</h2>;
 };
 
 export default SectionHeader;
