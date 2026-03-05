@@ -2,8 +2,9 @@
   position: relative;
   border-top: 1px solid
     color-mix(in srgb, var(--primary-color) 40%, transparent);
-  padding-top: 1rem;
-  padding-bottom: 2rem;
+  /* padding-top: 1rem;
+  padding-bottom: 2rem; */
+  padding: 1rem;
   width: 100%;
 }
 .repo_list_item:first-child {
@@ -31,7 +32,7 @@
   word-break: break-word;
 }
 .repoNameFull {
-  width: 100%;
+  /* width: 100%; */
 }
 .number {
   font-size: 11px;

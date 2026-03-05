@@ -8,6 +8,10 @@ import ContentWrapper from "./components/ContentWrapper/ContentWrapper";
 import GoUpButton from "./components/GoUpButton/GoUpButton";
 
 function App() {
+  const [theme, setTheme] = useState<"light" | "dark">(() => {
+    return (localStorage.getItem("theme") as "light" | "dark") ?? "light";
+  });
+
   const [inputValue, setInputValue] = useState("");
   const [isVisible, setIsVisible] = useState(false);
   const { person, isUserLoading, userError } = useUserInfo(inputValue);
@@ -21,6 +25,22 @@ function App() {
   } = useUserReposList(person ? inputValue : "");
   const isLoading = isUserLoading || isRepoLoading;
   const error = userError || repoError;
+
+  useEffect(() => {
+    document.documentElement.setAttribute("data-theme", theme);
+
+    const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+    const color = theme === "dark" ? "#1e293b" : "#f8fafc";
+
+    if (metaThemeColor) {
+      metaThemeColor.setAttribute("content", color);
+    } else {
+      const meta = document.createElement("meta");
+      meta.name = "theme-color";
+      meta.content = color;
+      document.head.appendChild(meta);
+    }
+  }, [theme]);
 
   useEffect(() => {
     console.log(userReposList);
@@ -40,8 +60,16 @@ function App() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    document.documentElement.setAttribute("data-theme", theme);
+  }, [theme]);
+
   const toggleTheme = () => {
-    console.log("temporary");
+    setTheme((prev) => {
+      const next = prev === "light" ? "dark" : "light";
+      localStorage.setItem("theme", next);
+      return next;
+    });
   };
   return (
     <>
