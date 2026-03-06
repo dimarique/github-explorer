@@ -4,7 +4,7 @@
     color-mix(in srgb, var(--primary-color) 40%, transparent);
   /* padding-top: 1rem;
   padding-bottom: 2rem; */
-  padding: 1rem;
+  /* padding: 1rem; */
   width: 100%;
 }
 .repo_list_item:first-child {
