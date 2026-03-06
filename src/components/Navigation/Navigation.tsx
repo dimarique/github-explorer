@@ -17,14 +17,12 @@ const Navigation: React.FC<NavigationProps> = ({
   reposList,
 }) => {
   return (
-    <div className={styles.navigation}>
-      <div className={styles.buttons_wrapper}>
-        {page > 1 && <button onClick={() => onPrevPage()}>Prev</button>}
-        {(page > 1 || reposList.length === 30) && <span>{page}</span>}
-        {reposList.length === 30 && (
-          <button onClick={() => onNextPage()}>Next</button>
-        )}
-      </div>
+    <div className={styles.buttons_wrapper}>
+      {page > 1 && <button onClick={() => onPrevPage()}>Prev</button>}
+      {(page > 1 || reposList.length === 30) && <span>{page}</span>}
+      {reposList.length === 30 && (
+        <button onClick={() => onNextPage()}>Next</button>
+      )}
     </div>
   );
 };
