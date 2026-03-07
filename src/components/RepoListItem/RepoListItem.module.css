@@ -5,7 +5,7 @@
   padding-top: 1rem;
   padding-bottom: 2rem;
   /* padding: 1rem; */
-  width: 100%;
+  /* width: 100%; */
 }
 .repo_list_item:first-child {
   border-top: 1px solid transparent;
@@ -32,7 +32,7 @@
   word-break: break-word;
 }
 .repoNameFull {
-  /* width: 100%; */
+  width: 100%;
 }
 .number {
   font-size: 11px;

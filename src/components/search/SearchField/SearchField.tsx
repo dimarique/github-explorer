@@ -52,9 +52,9 @@ const SearchField: React.FC<SearchFieldProps> = ({ setInputValue }) => {
           {
             <a
               style={{ cursor: "pointer" }}
-              onClick={() => setInputValue("gaearon")}
+              onClick={() => setInputValue("ubuntu")}
             >
-              gaearon
+              ubuntu
             </a>
           }
           ,{" "}
