@@ -18,7 +18,12 @@ const RepoListItem: React.FC<RepoListItemProps> = ({ repo }) => {
         className={`${styles.repo_name} ${!repo.language ? styles.repoNameFull : ""}`}
       >
         {repo.fork && (
-          <span title="Forked" style={{ display: "inline-flex" }}>
+          <span
+            title="Forked"
+            style={{
+              display: "inline-flex",
+            }}
+          >
             <GitBranch />
           </span>
         )}
