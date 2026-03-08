@@ -6,12 +6,12 @@ import { useUserInfo } from "./hooks/useUserInfo";
 import { useUserReposList } from "./hooks/useUserReposList";
 import ContentWrapper from "./components/ContentWrapper/ContentWrapper";
 import GoUpButton from "./components/GoUpButton/GoUpButton";
-import ResentsList from "./components/ResentsList/ResentsList";
-import type { ResentSearch } from "./types";
+import RecentsList from "./components/RecentsList/RecentsList";
+import type { RecentSearch } from "./types";
 
 function App() {
-  const [lastSearch, setLastSearch] = useState<ResentSearch[]>(() => {
-    return JSON.parse(localStorage.getItem("resent") ?? "[]");
+  const [lastSearch, setLastSearch] = useState<RecentSearch[]>(() => {
+    return JSON.parse(localStorage.getItem("recent") ?? "[]");
   });
   const [theme, setTheme] = useState<"light" | "dark">(() => {
     return (localStorage.getItem("theme") as "light" | "dark") ?? "light";
@@ -72,7 +72,7 @@ function App() {
     );
   }, [person]);
   useEffect(() => {
-    localStorage.setItem("resent", JSON.stringify(lastSearch));
+    localStorage.setItem("recent", JSON.stringify(lastSearch));
   }, [lastSearch]);
 
   useEffect(() => {
@@ -102,7 +102,7 @@ function App() {
           page={page}
         />
       ) : (
-        <ResentsList resents={lastSearch} setInputValue={setInputValue} />
+        <RecentsList recents={lastSearch} setInputValue={setInputValue} />
       )}
       {isVisible && <GoUpButton />}
     </>
