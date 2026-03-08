@@ -31,8 +31,6 @@ export function useUserReposList(username: string) {
     setRepoError(null);
     fetch(url)
       .then((res) => {
-        console.log(`Link is ${res.headers.get("Link")}`);
-
         if (!res.ok) {
           throw new Error("Something wrong");
         }

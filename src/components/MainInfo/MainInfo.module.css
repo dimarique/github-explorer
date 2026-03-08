@@ -23,7 +23,7 @@
 }
 
 .user_image {
-  border: 4px solid var(--accent-blue);
+  border: 4px solid var(--accent-orange);
   border-radius: 50%;
   aspect-ratio: 1 / 1;
   max-width: 100px;

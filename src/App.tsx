@@ -6,8 +6,13 @@ import { useUserInfo } from "./hooks/useUserInfo";
 import { useUserReposList } from "./hooks/useUserReposList";
 import ContentWrapper from "./components/ContentWrapper/ContentWrapper";
 import GoUpButton from "./components/GoUpButton/GoUpButton";
+import ResentsList from "./components/ResentsList/ResentsList";
+import type { ResentSearch } from "./types";
 
 function App() {
+  const [lastSearch, setLastSearch] = useState<ResentSearch[]>(() => {
+    return JSON.parse(localStorage.getItem("resent") ?? "[]");
+  });
   const [theme, setTheme] = useState<"light" | "dark">(() => {
     return (localStorage.getItem("theme") as "light" | "dark") ?? "light";
   });
@@ -43,11 +48,6 @@ function App() {
   }, [theme]);
 
   useEffect(() => {
-    console.log(userReposList);
-    console.log(person);
-  });
-
-  useEffect(() => {
     if (person || userReposList) {
       window.scrollTo({ top: 250, behavior: "smooth" });
     }
@@ -55,10 +55,25 @@ function App() {
 
   useEffect(() => {
     const handleScroll = () => setIsVisible(window.scrollY > 300);
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    if (!person) return;
+    setLastSearch((prev) =>
+      [
+        ...prev.filter((p) => p.login !== person.login),
+        {
+          login: person.login,
+          name: person.name,
+        },
+      ].slice(-5),
+    );
+  }, [person]);
+  useEffect(() => {
+    localStorage.setItem("resent", JSON.stringify(lastSearch));
+  }, [lastSearch]);
 
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
@@ -78,17 +93,16 @@ function App() {
       {error && <div className="error">{error}</div>}
       {isLoading ? (
         <div>Loading...</div>
+      ) : person && userReposList ? (
+        <ContentWrapper
+          person={person}
+          onNextPage={goToNextPage}
+          onPrevPage={goToPrevPage}
+          reposList={userReposList}
+          page={page}
+        />
       ) : (
-        person &&
-        userReposList && (
-          <ContentWrapper
-            person={person}
-            onNextPage={goToNextPage}
-            onPrevPage={goToPrevPage}
-            reposList={userReposList}
-            page={page}
-          />
-        )
+        <ResentsList resents={lastSearch} setInputValue={setInputValue} />
       )}
       {isVisible && <GoUpButton />}
     </>

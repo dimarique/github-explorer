@@ -7,7 +7,10 @@
   color-scheme: light dark;
   --primary-color: #164e63;
   --bg-color: #f8fafc;
+  --accent-orange: #f97316;
+  --accent-yellow: #eab308;
   --accent-blue: #2563eb;
+  --accent-brown: #632b16;
   --shadow-small: rgba(0, 0, 0, 0.15) 0px 1px 1px;
 }
 

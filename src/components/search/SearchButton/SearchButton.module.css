@@ -1,6 +1,7 @@
 .searchButton {
   border-radius: 17px;
-  background-color: var(--accent-blue);
+  background-color: var(--accent-orange);
   padding: 8px 16px;
-  color: #f8fafc;
+  color: var(--primary-color);
+  font-weight: 600;
 }
