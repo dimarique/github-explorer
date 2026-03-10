@@ -71,6 +71,7 @@ function App() {
       ].slice(-5),
     );
   }, [person]);
+
   useEffect(() => {
     localStorage.setItem("recent", JSON.stringify(lastSearch));
   }, [lastSearch]);
@@ -86,6 +87,7 @@ function App() {
       return next;
     });
   };
+
   return (
     <>
       <Header toggleTheme={toggleTheme} setInputValue={setInputValue} />
