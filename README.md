@@ -2,7 +2,7 @@
 
 A web application for searching GitHub users and browsing their repositories. Built with React 19, TypeScript, and the GitHub REST API.
 
-<img src="./public/screenshots/main_screen_light.png" width="600"/>
+<img src="./public/screenshots/main_screen_light.png" width="400"/>
 
 ## ✨ Features
 
