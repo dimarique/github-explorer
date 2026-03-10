@@ -11,7 +11,6 @@ export function useUserReposList(username: string) {
   const [isRepoLoading, setIsRepoLoading] = useState(false);
   const [repoError, setRepoError] = useState(false);
   const [page, setPage] = useState(1);
-  // const url = `https://api.github.com/users/${username}/repos?page=2&per_page=100`;
   const url = `https://api.github.com/users/${username}/repos?page=${page}`;
 
   const goToNextPage = () => {
