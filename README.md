@@ -2,7 +2,7 @@
 
 A web application for searching GitHub users and browsing their repositories. Built with React 19, TypeScript, and the GitHub REST API.
 
-<img src="./public/screenshots/main_screen_light.png" width="400"/>
+<img src="./public/screenshots/preview.png" width="100%"/>
 
 ## ✨ Features
 
@@ -21,16 +21,16 @@ A web application for searching GitHub users and browsing their repositories. Bu
 
 <table>
   <tr>
-    <td><img src="./public/screenshots/main_screen_light.png" width="400"/></td>
-    <td><img src="./public/screenshots/main_screen_dark.png" width="400"/></td>
+    <td><img src="./public/screenshots/main_page.PNG" width="400"/></td>
+    <td><img src="./public/screenshots/main_page_dark.PNG" width="400"/></td>
   </tr>
   <tr>
     <td align="center">Light theme</td>
     <td align="center">Dark theme</td>
   </tr>
   <tr>
-    <td><img src="./public/screenshots/user_info_screen.png" width="400"/></td>
-    <td><img src="./public/screenshots/repos_info_screen.png" width="400"/></td>
+    <td><img src="./public/screenshots/user_info.PNG" width="400"/></td>
+    <td><img src="./public/screenshots/repo_info.PNG" width="400"/></td>
   </tr>
   <tr>
     <td align="center">User profile</td>
