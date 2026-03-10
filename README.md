@@ -55,5 +55,5 @@ A web application for searching GitHub users and browsing their repositories. Bu
 
 **Dmytro Kuzmenko**
 
-- GitHub: [@yourusername](https://github.com/yourusername)
-- LinkedIn: [linkedin.com/in/yourprofile](https://linkedin.com/in/yourprofile)
+- GitHub: [@dimarique](https://github.com/dimarique)
+- LinkedIn: [linkedin.com/in/dimarique](https://linkedin.com/in/dimarique)
