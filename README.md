@@ -1,116 +1,59 @@
 # 🔍 GitHub Explorer
 
-A modern web application for discovering GitHub users and exploring their repositories. Built with React, TypeScript, and the GitHub REST API.
+A web application for searching GitHub users and browsing their repositories. Built with React 19, TypeScript, and the GitHub REST API.
 
-![GitHub Explorer Preview](./preview.png)
+<img src="./public/screenshots/main_screen_light.png" width="600"/>
 
 ## ✨ Features
 
-- **Real-time Search** - Find any GitHub user instantly
-- **Detailed Profiles** - View user info, bio, location, and stats
-- **Repository Browser** - Explore repos with descriptions, stars, and forks
-- **Language Filters** - Filter repositories by programming language
-- **Responsive Design** - Works seamlessly on desktop and mobile
-- **Modern UI** - Glassmorphism design with smooth animations
-
-## 🚀 Demo
-
-[Live Demo](https://your-app.vercel.app) | [Video Walkthrough](link-if-you-have)
-
-## 🛠️ Built With
-
-- **React 18** - UI library
-- **TypeScript** - Type safety
-- **Tailwind CSS** - Styling
-- **GitHub REST API** - Data source
-- **Lucide React** - Icons
-- **Vite** - Build tool
-
-## 📦 Installation
-
-# Clone the repository
-
-git clone https://github.com/yourusername/github-explorer.git
-
-# Navigate to project directory
-
-cd github-explorer
-
-# Install dependencies
-
-npm install
-
-# Start development server
-
-npm run dev
-
-## 🔑 API Setup
-
-This app uses the GitHub API. For better rate limits, add your GitHub token:
-
-1. Create a `.env` file in the root directory
-2. Add your token:
-
-```
-VITE_GITHUB_TOKEN=your_personal_access_token
-```
-
-[How to generate a GitHub token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
-
-## 💡 Usage
-
-1. Enter a GitHub username in the search bar
-2. Press Enter or click Search
-3. View user profile and statistics
-4. Browse through their repositories
-5. Filter repos by language or sort by stars
+- **User search** — enter a GitHub username to fetch their public profile and repositories
+- **User profile card** — displays avatar, name, bio, location, blog link, join date, and "available for hire" status
+- **Stats overview** — shows public repository count, followers, and following
+- **Repository list** — paginated list of repos (30 per page) with name, description, language badge, star and fork counts, creation date, and last push date
+- **Repo metadata** — forked and archived repos are visually marked; homepage links are shown when available
+- **Pagination** — navigate between pages of repositories with Prev/Next buttons
+- **Recent searches** — the last 5 searched users are saved to `localStorage` and shown on the start screen for quick re-access
+- **Light / dark theme** — toggle between themes; preference is persisted in `localStorage`
+- **Scroll-to-top button** — appears after scrolling down 300px
+- **Error handling** — displays a message if the user is not found or the request fails
 
 ## 📸 Screenshots
 
-### Main Search
+<table>
+  <tr>
+    <td><img src="./public/screenshots/main_screen_light.png" width="400"/></td>
+    <td><img src="./public/screenshots/main_screen_dark.png" width="400"/></td>
+  </tr>
+  <tr>
+    <td align="center">Light theme</td>
+    <td align="center">Dark theme</td>
+  </tr>
+  <tr>
+    <td><img src="./public/screenshots/user_info_screen.png" width="400"/></td>
+    <td><img src="./public/screenshots/repos_info_screen.png" width="400"/></td>
+  </tr>
+  <tr>
+    <td align="center">User profile</td>
+    <td align="center">Repository list</td>
+  </tr>
+</table>
 
-![Search Interface](./screenshots/search.png)
+## 🛠️ Built With
 
-### User Profile
+- **React 19** — UI library
+- **TypeScript** — type safety throughout, with types from `@octokit/openapi-types`
+- **CSS Modules** — component-scoped styles
+- **GitHub REST API** — data source (no authentication required)
+- **Lucide React** — icons
+- **Vite** — build tool
 
-![User Profile](./screenshots/profile.png)
+## 🚀 Live Demo
 
-### Repository List
-
-![Repositories](./screenshots/repos.png)
-
-## 🎯 Key Learnings
-
-- Working with REST APIs and handling async data
-- TypeScript generics and interface design
-- Error handling and loading states
-- Responsive design with Tailwind CSS
-- React hooks (useState, useEffect, custom hooks)
-
-## 🚧 Roadmap
-
-- [ ] Add pagination for repositories
-- [ ] Dark/light theme toggle
-- [ ] Save favorite users to local storage
-- [ ] Compare two users side-by-side
-- [ ] Repository search within user profile
-
-## 🤝 Contributing
-
-Contributions are welcome! Feel free to open an issue or submit a pull request.
-
-## 📝 License
-
-MIT License - feel free to use this project for learning or your portfolio.
+[gregarious-tulumba-38d01f.netlify.app](https://gregarious-tulumba-38d01f.netlify.app)
 
 ## 👤 Author
 
-**Your Name**
+**Dmytro Kuzmenko**
 
 - GitHub: [@yourusername](https://github.com/yourusername)
-- LinkedIn: [Your Name](https://linkedin.com/in/yourprofile)
-- Portfolio: [yourwebsite.com](https://yourwebsite.com)
-
----
-
-⭐ Star this repo if you found it helpful!
+- LinkedIn: [linkedin.com/in/yourprofile](https://linkedin.com/in/yourprofile)
