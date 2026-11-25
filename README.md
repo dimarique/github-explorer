@@ -49,7 +49,7 @@ A web application for searching GitHub users and browsing their repositories. Bu
 
 ## 🚀 Live Demo
 
-[gregarious-tulumba-38d01f.netlify.app](https://gregarious-tulumba-38d01f.netlify.app)
+[dimarique-github-explorer.netlify.app](https://dimarique-github-explorer.netlify.app)
 
 ## 👤 Author
 
